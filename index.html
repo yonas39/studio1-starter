@@ -1,14 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Yet Another To-Do List</title>
+    <script src="index.js" type="module"></script>
+  </head>
+  <body>
+    <div id="app">
+      <h1>ToDo List</h1>
+      <ul v-for="(task,i) in tasks">
+        <li>
+          <input type="checkbox" />
+          <input type="text" />
+          <button @click="deleteItem(i)">X</button>
+        </li>
+      </ul>
 
-<meta charset="UTF-8">
-<title>Yet Another To-Do List</title>
-<script src="index.js" type="module"></script>
-</head>
-<body>
-	<div id="app">
-
-	</div>
-</body>
+      <div>
+        <button @click="addItem()">add items</button>
+        <button @click="clearCompleted()">clear completed</button>
+      </div>
+    </div>
+  </body>
 </html>
