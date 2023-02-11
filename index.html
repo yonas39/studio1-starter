@@ -8,7 +8,9 @@
   <body>
     <div id="app">
       <h1>ToDo List</h1>
-      <ul v-for="(task,i) in tasks">
+
+      <!-- method="task" and v-model="task" can be use interchangeably in this case!!-->
+      <ul v-for="(task,i) in tasks" v-model="task">
         <li>
           <input type="checkbox" />
           <input type="text" />
