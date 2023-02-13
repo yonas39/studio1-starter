@@ -7,12 +7,13 @@
   </head>
   <body>
     <div id="app">
+      <ma-data src="local:tasks" v-model="tasks" autosave></ma-data>
       <h1>ToDo List</h1>
 
       <!-- method="task" and v-model="task" can be use interchangeably in this case!!-->
-      <ul v-for="(task,i) in tasks" v-model="task">
+      <ul v-for="(task,i) in tasks">
         <li>
-          <input type="checkbox" />
+          <input type="checkbox" v-model="task.done" />
           <input type="text" />
           <button @click="deleteItem(i)">X</button>
         </li>

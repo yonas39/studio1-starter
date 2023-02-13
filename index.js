@@ -20,6 +20,7 @@ let app = createApp(
       },
 
       deleteItem(i) {
+        // alert(i);
         this.tasks.splice(i, 1);
         this.setActive(i - 1);
       },
